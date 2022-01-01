@@ -1,6 +1,4 @@
-
-   
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   entry: "./app/App.js",
@@ -20,15 +18,21 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js$|jsx/,
         exclude: /(node_modules)/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-react", ["@babel/preset-env", { targets: { node: "12" } }]]
+            presets: [
+              "@babel/preset-react",
+              ["@babel/preset-env", { targets: { node: "12" } }]
+            ]
           }
         }
       }
     ]
+  },
+  resolve: {
+    extensions: ["", ".js", ".jsx"]
   }
-}
+};
