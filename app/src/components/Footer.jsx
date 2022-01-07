@@ -18,9 +18,9 @@ const Footer = () => {
         </Link>
       </p>
       <p className="m-0">
-        Copyright &copy; 2020{" "}
-        <Link to="/" className="text-muted">
-          ComplexApp
+      Copyright &copy;  {new Date().getFullYear()}
+      <Link to="/" className="text-muted">
+        ComplexApp
         </Link>
         . All rights reserved.
       </p>
